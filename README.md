@@ -1,46 +1,45 @@
-**📈 Stock Trend Prediction Web App**
+# 📈 Stock Trend Prediction Web App
 
 The code presents an interactive web app that uses a trained LSTM neural network to forecast stock prices based on historical market data.
 
 <img width="2469" height="1222" alt="image" src="https://github.com/user-attachments/assets/2ca0ec56-33fd-41ec-94d8-3b5b4c83437e" />
 
-**Overview**
+## Overview
 This project combines deep learning with financial data analysis to build a predictive system that anticipates stock trends. Using an LSTM model trained on historical stock prices, it generates future price predictions and displays them alongside actual data in a clean, interactive Streamlit interface. 
 
-**Features**
+## Features
 - Ticker-based Input: Enter any valid stock symbol (e.g. AAPL, GOOG, TSLA) to fetch historical stock data automatically
 - Visual Time Series Charts: Raw Closing Prices, 100-day & 200-day Moving Averages, Actual vs Predicted Prices
 - LSTM-Powered Predictions: Trained model (keras_model.h5) uses sequence learning to predict stock prices based on trends
 - Streamlit Interface: Deploys instantly as a modern, interactive web app with a smooth UX
 
-**How It Works**
-1. Data Collection
+## How it Works
+### 1. Data Collection
 Historical daily stock prices from 2010 to 2019 are pulled from Yahoo Finance via the yfinance API.
 
-2. Visualization
+### 2. Visualization
 Several plots help users understand historical trends:
 - Raw prices over time
 - Prices with moving averages
 - Predicted vs real prices
 
-3. Data Preprocessing
+### 3. Data Preprocessing
 - Split 70% training / 30% testing
 - Normalized using MinMaxScaler
 - 100-day sliding windows are created for time-series prediction
 
-4. Model Prediction
+### 4. Model Prediction
 - Pretrained LSTM model is loaded (keras_model.h5)
 - Takes in the last 100 days of the training set + testing data
 - Predicts stock closing prices over time
 
-5. Results Display
+### 5. Results Display
 - Rescales predictions to real price range
 - Final plot compares predicted vs. original prices
 
 
-<p align="center">
-  <b>Tech Stack & Responsibilities Breakdown</b>
-</p>
+## Tech Stack & Responsibilities Breakdown
+
 
 <table align="center">
   <tr>
@@ -97,16 +96,16 @@ Several plots help users understand historical trends:
 
 <img width="2735" height="1243" alt="image" src="https://github.com/user-attachments/assets/7b0691d0-57bb-416d-b2d8-4df8f682049e" />
 
-**Running the Application**
-1) Clone the Repository:
+## Running the Application
+### 1) Clone the Repository:
 git clone https://github.com/EthanPoon25/stock-prediction.git
 cd stock-predictor-app
 
-2) Install Dependencies
+### 2) Install Dependencies:
 Make sure you have Python and pip installed.
 pip install -r requirements.txt
 
-3) Run the App
+### 3) Run the App:
 Launch the Streamlit web app in your browser.
 streamlit run app.py
 
