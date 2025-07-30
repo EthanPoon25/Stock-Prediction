@@ -99,7 +99,7 @@ Several plots help users understand historical trends:
 
 **Running the Application**
 1) Clone the Repository:
-git clone https://github.com/EthanPoon25/stock-predictor-app.git
+git clone https://github.com/EthanPoon25/stock-prediction.git
 cd stock-predictor-app
 
 2) Install Dependencies
